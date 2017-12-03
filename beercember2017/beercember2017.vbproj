@@ -127,6 +127,8 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="Routes.vb" />
+    <Compile Include="viewmodel\BeerData.vb" />
+    <Compile Include="viewmodel\BeerDay.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">

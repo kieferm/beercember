@@ -16,7 +16,32 @@
         <section class="container">
 
             <h2 class="topbanner">Beercember 2017</h2>
-            
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Beer</th>
+                        <th>ABV [%]</th>
+                        <th>Untappd</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    @Each.Beers
+                        <tr>
+                            <td>@Current.CalendarDay</td>
+                            <td>@Current.Beer</td>
+                            <td>@Current.Alcohol</td>
+                            <td>
+                                <a href="@Current.Href">Link</a>
+                            </td>
+                        </tr>
+                    @EndEach
+
+                </tbody>
+            </table>
+
 
         </section>
     </main>
