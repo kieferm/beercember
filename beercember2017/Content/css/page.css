@@ -1,0 +1,26 @@
+﻿
+.topbanner {
+    text-align: center;
+}
+
+.surprise {
+    color: darkorange;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.roundrectsh {
+    box-shadow: 0px 0px 30px #888;
+    border-radius: 10px;
+}
+
+.roundrect {
+    display:block;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right:auto;
+}
+
+.padabove {
+    padding-top: 4em;
+}
