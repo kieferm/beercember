@@ -21,6 +21,7 @@
                 <thead>
                     <tr>
                         <th>Date</th>
+                        <th>Brewery</th>
                         <th>Beer</th>
                         <th>ABV [%]</th>
                         <th>Untappd</th>
@@ -31,6 +32,7 @@
                     @Each.Beers
                         <tr>
                             <td>@Current.CalendarDay</td>
+                            <td>@Current.Brewery</td>
                             <td>@Current.Beer</td>
                             <td>@Current.Alcohol</td>
                             <td>
