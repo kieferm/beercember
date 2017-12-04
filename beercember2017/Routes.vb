@@ -17,6 +17,8 @@ Public Class Routes : Inherits NancyModule
 
         Dim beers As New List(Of BeerDay)
 
+
+
         beers.Add(New BeerDay(#12/2/2017#, "Singlecut", "Charlie's Good Tonight", "6.0", "https://untappd.com/b/singlecut-beersmiths-charlie-s-good-tonight/2145656"))
         beers.Add(New BeerDay(#12/3/2017#, "Tröegs", "Troegenator", "8.2", "https://untappd.com/b/troegs-independent-brewing-troegenator-doublebock/31961"))
         beers.Add(New BeerDay(#12/4/2017#, "Bitburger", "Premium Pils  ", "4.8", "https://untappd.com/b/bitburger-braugruppe-bitburger-premium-pils-premium-beer/17252"))
@@ -42,7 +44,16 @@ Public Class Routes : Inherits NancyModule
         beers.Add(New BeerDay(#12/24/2017#, "Bell's", "Christmas Ale", "7.5", "https://untappd.com/b/bell-s-brewery-christmas-ale-2017/2321671"))
         beers.Add(New BeerDay(#12/25/2017#, "Ommegang", "Abbey Ale", "8.2", "https://untappd.com/b/brewery-ommegang-abbey-ale/6510"))
 
-        Dim beersToDate As IEnumerable(Of BeerDay) = beers.Where(Function(b) b.CalendarDate <= Date.Now.Date)
+
+        Dim tz As TimeZoneInfo = TimeZoneInfo.FindSystemTimeZoneById("Eastern Standard Time")
+
+        For Each b In beers
+            b.CalendarDate = TimeZoneInfo.ConvertTime(b.CalendarDate, tz)
+        Next
+
+        Dim refDate As Date = TimeZoneInfo.ConvertTime(Date.Now.Date, tz)
+
+        Dim beersToDate As IEnumerable(Of BeerDay) = beers.Where(Function(b) b.CalendarDate <= refDate)
 
         Return beersToDate.ToList
 
