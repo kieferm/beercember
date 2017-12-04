@@ -42,7 +42,7 @@ Public Class Routes : Inherits NancyModule
         beers.Add(New BeerDay(#12/24/2017#, "Bell's", "Christmas Ale", "7.5", "https://untappd.com/b/bell-s-brewery-christmas-ale-2017/2321671"))
         beers.Add(New BeerDay(#12/25/2017#, "Ommegang", "Abbey Ale", "8.2", "https://untappd.com/b/brewery-ommegang-abbey-ale/6510"))
 
-        Dim beersToDate As IEnumerable(Of BeerDay) = beers.Where(Function(b) b.CalendarDate <= Date.Now.Date.AddHours(-5))
+        Dim beersToDate As IEnumerable(Of BeerDay) = beers.Where(Function(b) b.CalendarDate <= Date.Now.AddHours(-5).Date)
 
         Return beersToDate.ToList
 
