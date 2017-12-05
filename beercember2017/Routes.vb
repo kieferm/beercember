@@ -43,8 +43,9 @@ Public Class Routes : Inherits NancyModule
         beers.Add(New BeerDay(#12/25/2017#, "Ommegang", "Abbey Ale", "8.2", "https://untappd.com/b/brewery-ommegang-abbey-ale/6510"))
 
         Dim beersToDate As IEnumerable(Of BeerDay) = beers.Where(Function(b) b.CalendarDate <= Date.Now.AddHours(-5).Date)
+        Dim sortedBeers As IEnumerable(Of BeerDay) = beersToDate.OrderByDescending(Function(b) b.CalendarDate)
 
-        Return beersToDate.ToList
+        Return sortedBeers.ToList
 
     End Function
 

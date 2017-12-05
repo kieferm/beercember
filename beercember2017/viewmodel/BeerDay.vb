@@ -1,7 +1,7 @@
 ﻿Public Class BeerDay
     Public ReadOnly Property CalendarDay As String
         Get
-            Return CalendarDate.ToString("MMMM d")
+            Return CalendarDate.ToString("MMM d")
         End Get
     End Property
 

@@ -24,3 +24,8 @@
 .padabove {
     padding-top: 4em;
 }
+
+#timestamp {
+    font-size: xx-small;
+    color: lightgray;
+}
