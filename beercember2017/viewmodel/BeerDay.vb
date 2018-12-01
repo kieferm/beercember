@@ -10,11 +10,12 @@
     Public Property Beer As String = ""
     Public Property Href As String = ""
     Public Property Alcohol As String = ""
+    Public Property Ibu As String = ""
 
-    Public Sub New(day As Date, brewery As String, beer As String, abv As String, link As String)
-        CalendarDate = day
+    Public Sub New(brewery As String, beer As String, abv As String, ibu As String, link As String)
         Me.Brewery = brewery
         Me.Beer = beer
+        Me.Ibu = ibu
         Alcohol = abv
         Href = link
     End Sub

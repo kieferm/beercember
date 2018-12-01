@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <title>Beercember 2017</title>
+    <title>Beercember 2018</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="~/Content/css/milligram.css">
@@ -15,7 +15,7 @@
     <main class="wrapper">
         <section class="container">
 
-            <h2 class="topbanner">Beercember 2017</h2>
+            <h2 class="topbanner">Beercember 2018</h2>
 
             <table>
                 <thead>
@@ -24,21 +24,23 @@
                         <th>Brewery</th>
                         <th>Beer</th>
                         <th>ABV [%]</th>
+                        <th>IBU</th>
                         <th>Untappd</th>
                     </tr>
                 </thead>
                 <tbody>
                     
                     @Each.Beers
-                        <tr>
-                            <td>@Current.CalendarDay</td>
-                            <td>@Current.Brewery</td>
-                            <td>@Current.Beer</td>
-                            <td>@Current.Alcohol</td>
-                            <td>
-                                <a href="@Current.Href">Link</a>
-                            </td>
-                        </tr>
+                    <tr>
+                        <td>@Current.CalendarDay</td>
+                        <td>@Current.Brewery</td>
+                        <td>@Current.Beer</td>
+                        <td>@Current.Alcohol</td>
+                        <td>@Current.Ibu</td>
+                        <td>
+                            <a href="@Current.Href">Link</a>
+                        </td>
+                    </tr>
                     @EndEach
 
                 </tbody>
