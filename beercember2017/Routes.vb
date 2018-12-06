@@ -42,7 +42,7 @@ Public Class Routes : Inherits NancyModule
         beers.Add(New BeerDay("Highway Manor", "Hong Kong Sayjohn", "6.7", "15", "https://untappd.com/b/highway-manor-brewing-co-hong-kong-sayjohn/1978886"))
         beers.Add(New BeerDay("Prairie", "Christmas Bomb", "13.0", "65", "https://untappd.com/b/prairie-artisan-ales-christmas-bomb/868841"))
 
-        Dim firstDay As Date = #12/2/2018#
+        Dim firstDay As Date = #12/1/2018#
         For Each beer As BeerDay In beers
             beer.CalendarDate = firstDay.AddDays(beers.IndexOf(beer))
         Next
